@@ -21,6 +21,10 @@ local function onSecondView( event )
 	storyboard.gotoScene( "view2" )
 end
 
+local function gameStart( event )
+  storyboard.gotoScene( "game_scene" )
+end
+
 
 -- create a tabBar widget with two buttons at the bottom of the screen
 
@@ -28,6 +32,7 @@ end
 local tabButtons = {
 	{ label="First", defaultFile = "icon1.png", overFile = "icon1-down.png", width = 32, height = 32, onPress=onFirstView, selected=true },
  	{ label="Second", defaultFile = "icon2.png", overFile = "icon2-down.png", width = 32, height = 32, onPress=onSecondView },
+ 	{ label="Start", defaultFile = "icon2.png", overFile = "icon2-down.png", width = 32, height = 32, onPress=gameStart },
 }
 
 -- create the actual tabBar widget
