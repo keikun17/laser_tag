@@ -6,6 +6,7 @@
 
 local storyboard = require( "storyboard" )
 local scene = storyboard.newScene()
+local unit = require( "units.unit" )
 
 -----------------------------------------------------------------------------------------
 -- BEGINNING OF YOUR IMPLEMENTATION
@@ -23,12 +24,14 @@ function scene:createScene( event )
 	local bg = display.newRect( 0, 0, display.contentWidth, display.contentHeight )
   bg:setFillColor( 0 ) -- black
 
-  local soldier = display.newRect( 40,40, 10, 10)
-  soldier:setFillColor( 200 )
+  --local soldier = display.newRect( 40,40, 10, 10)
+  --soldier:setFillColor( 200 )
+  player = createSoldier( 40, 40, 10, 10 )
+
 	-- all objects must be added to group (e.g. self.view)
 
 	group:insert( bg )
-	group:insert( soldier )
+	group:insert( player )
 end
 
 -- Called immediately after scene has moved onscreen:
